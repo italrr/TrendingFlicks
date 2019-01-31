@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#fff"
+                android:padding="5dip" >
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/flick_thumbnail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="3dip"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/flick_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:minHeight="177dp"/>
+            <!--android:background="@drawable/shadow_rect"-->
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/flick_thumbnail"
+        android:layout_toRightOf="@+id/flick_thumbnail"
+        >
+        <!-- Flick Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE"
+            android:textColor="#000"
+            android:typeface="sans"
+            android:textSize="15dip"
+            android:textStyle="bold"/>
+
+        <!-- Released -->
+        <TextView
+            android:id="@+id/released"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:textSize="8dip"
+            android:textColor="#151515"
+            android:layout_marginTop="1dip"
+            android:layout_alignParentLeft="true"
+            android:text="GENRE | DURATION"
+            android:textStyle="bold"/>
+
+        <!-- TYPE -->
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/released"
+            android:textSize="10dip"
+            android:textColor="#111"
+            android:layout_marginTop="1dip"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:text="" />
+
+
+        <!-- Genre/Duration -->
+        <TextView
+            android:id="@+id/secondline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type"
+            android:textSize="10dip"
+            android:textColor="#111"
+            android:layout_marginTop="1dip"
+            android:layout_alignParentLeft="true"
+            android:text="GENRE | DURATION" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondline"
+            android:textSize="12dip"
+            android:textColor="#222"
+            android:layout_marginTop="8dip"
+            android:layout_alignParentLeft="true"
+            android:text="DESCRIPTION"
+            android:scrollHorizontally="false"
+            android:ellipsize="end"
+            android:maxLines="6"
+
+             />
+
+        <!-- Actors -->
+        <TextView
+            android:id="@+id/actors"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:textSize="10dip"
+            android:textColor="#444"
+            android:layout_marginTop="8dip"
+            android:layout_alignParentLeft="true"
+            android:text="Actors: JOHN DOE, JENNIFER DOE"
+            />
+
+        <!-- Ratings -->
+        <TextView
+            android:id="@+id/ratings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actors"
+            android:textSize="10dip"
+            android:textColor="#333"
+            android:layout_marginTop="5dip"
+            android:text="IMDB: 5/5 | METASCORE: 5/5"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+</RelativeLayout>
